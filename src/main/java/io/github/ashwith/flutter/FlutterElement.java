@@ -4,7 +4,7 @@ package io.github.ashwith.flutter;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonPrimitive;
-import org.openqa.selenium.remote.RemoteWebElement;
+import io.appium.java_client.remote.AppiumWebElement;
 
 import java.util.Base64;
 import java.util.HashMap;
@@ -17,7 +17,7 @@ import java.util.Objects;
  * @author ashwith
  * @version 1.0.0
  */
-public class FlutterElement extends RemoteWebElement {
+public class FlutterElement extends AppiumWebElement {
 
     private final Map<String, Object> rawMap;
     private final Gson gson = new Gson();

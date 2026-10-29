@@ -9,8 +9,7 @@ import io.github.ashwith.flutter.finders.ByToolTip;
 import io.github.ashwith.flutter.finders.ByType;
 import io.github.ashwith.flutter.finders.ByValueKey;
 import io.github.ashwith.flutter.finders.PageBack;
-import org.openqa.selenium.remote.FileDetector;
-import org.openqa.selenium.remote.RemoteWebDriver;
+import io.appium.java_client.remote.AppiumRemoteWebDriver;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -24,13 +23,11 @@ import java.util.regex.Pattern;
  */
 public class FlutterFinder implements ByValueKey, ByType, ByToolTip, ByText, ByAncestor, ByDescendant,
         BySemanticsLabel, PageBack {
-    RemoteWebDriver driver;
-    FileDetector fileDetector;
+    AppiumRemoteWebDriver driver;
     private static final String FINDER_TYPE = "finderType";
 
-    public FlutterFinder(RemoteWebDriver driver) {
+    public FlutterFinder(AppiumRemoteWebDriver driver) {
         this.driver = driver;
-        this.fileDetector = keys -> null;
     }
 
     @Override
@@ -40,7 +37,6 @@ public class FlutterFinder implements ByValueKey, ByType, ByToolTip, ByText, ByA
                         "keyValueType", "String",
                         "keyValueString", key));
         flutterElement.setParent(driver);
-        flutterElement.setFileDetector(fileDetector);
         return flutterElement;
     }
 
@@ -51,7 +47,6 @@ public class FlutterFinder implements ByValueKey, ByType, ByToolTip, ByText, ByA
                         "keyValueType", "int",
                         "keyValueString", key));
         flutterElement.setParent(driver);
-        flutterElement.setFileDetector(fileDetector);
         return flutterElement;
     }
 
@@ -62,7 +57,6 @@ public class FlutterFinder implements ByValueKey, ByType, ByToolTip, ByText, ByA
                 "type", type
         ));
         flutterElement.setParent(driver);
-        flutterElement.setFileDetector(fileDetector);
         return flutterElement;
     }
 
@@ -73,7 +67,6 @@ public class FlutterFinder implements ByValueKey, ByType, ByToolTip, ByText, ByA
                 "text", toolTipText
         ));
         flutterElement.setParent(driver);
-        flutterElement.setFileDetector(fileDetector);
         return flutterElement;
     }
 
@@ -84,7 +77,6 @@ public class FlutterFinder implements ByValueKey, ByType, ByToolTip, ByText, ByA
                 "text", input
         ));
         flutterElement.setParent(driver);
-        flutterElement.setFileDetector(fileDetector);
         return flutterElement;
     }
 
@@ -100,7 +92,6 @@ public class FlutterFinder implements ByValueKey, ByType, ByToolTip, ByText, ByA
         matchIdentifier.put("matching", matching.getRawMap());
         FlutterElement flutterElement = new FlutterElement(matchIdentifier);
         flutterElement.setParent(driver);
-        flutterElement.setFileDetector(fileDetector);
         return flutterElement;
     }
 
@@ -116,7 +107,6 @@ public class FlutterFinder implements ByValueKey, ByType, ByToolTip, ByText, ByA
         matchIdentifier.put("matching", matching.getRawMap());
         FlutterElement flutterElement = new FlutterElement(matchIdentifier);
         flutterElement.setParent(driver);
-        flutterElement.setFileDetector(fileDetector);
         return flutterElement;
     }
 
@@ -128,7 +118,6 @@ public class FlutterFinder implements ByValueKey, ByType, ByToolTip, ByText, ByA
                 "label", label
         ));
         flutterElement.setParent(driver);
-        flutterElement.setFileDetector(fileDetector);
         return flutterElement;
     }
 
@@ -140,7 +129,6 @@ public class FlutterFinder implements ByValueKey, ByType, ByToolTip, ByText, ByA
                 "label", label.toString()
         ));
         flutterElement.setParent(driver);
-        flutterElement.setFileDetector(fileDetector);
         return flutterElement;
     }
 
