@@ -13,15 +13,15 @@ Add maven dependency to pom.xml
 
 ```xml
 <dependency>
-    <groupId>io.github.ashwithpoojary98</groupId>
+    <groupId>io.github.sanoj-s</groupId>
     <artifactId>appium_flutterfinder_java</artifactId>
-    <version>1.0.12</version>
+    <version>2.0.0</version>
 </dependency>
 ```
 
 ## Maven Center Repo link
 
-https://mvnrepository.com/artifact/io.github.ashwithpoojary98/appium_flutterfinder_java
+https://mvnrepository.com/artifact/io.github.sanoj-s/appium_flutterfinder_java
 ## Usage
 
 ```java
@@ -29,7 +29,7 @@ https://mvnrepository.com/artifact/io.github.ashwithpoojary98/appium_flutterfind
 import io.appium.java_client.AppiumDriver;
 
 public class FlutterFinderExampleTest {
-    RemoteWebDriver driver;
+    AppiumDriver driver;
 
     @BeforeMethod
     public void openApp() throws MalformedURLException {
