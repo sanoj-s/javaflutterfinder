@@ -47,5 +47,5 @@ jobs:
 
       - name: 5. Deploy to Maven Central Portal
         env:
-          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
-        run: mvn clean deploy -P release --batch-mode -Dgpg.passphrase="$GPG_PASSPHRASE" -Dgpg.pinentry-mode=loopback
+          MAVEN_GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+        run: mvn clean deploy -P release --batch-mode -Dgpg.pinentry-mode=loopback
