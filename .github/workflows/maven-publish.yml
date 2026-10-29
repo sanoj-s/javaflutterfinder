@@ -46,4 +46,6 @@ jobs:
           EOF
 
       - name: 5. Deploy to Maven Central Portal
-        run: mvn clean deploy -P release --batch-mode -Dgpg.passphrase="${{ secrets.GPG_PASSPHRASE }}" -Dgpg.pinentry-mode=loopback
+        env:
+          MAVEN_GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+        run: mvn clean deploy -P release --batch-mode -Dgpg.pinentry-mode=loopback
