@@ -3,7 +3,7 @@ package io.github.ashwith.flutter.example;
 import io.github.ashwith.flutter.FlutterFinder;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.DesiredCapabilities;
+import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.AppiumDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -19,7 +19,7 @@ public class FlutterFinderExampleTest {
 
     @BeforeMethod
     public void openApp() throws MalformedURLException {
-        DesiredCapabilities capabilities = new DesiredCapabilities();
+        UiAutomator2Options capabilities = new UiAutomator2Options();
         capabilities.setCapability("deviceName", "emulator-5554");
         capabilities.setCapability("platformName", "Android");
         capabilities.setCapability("noReset", true);

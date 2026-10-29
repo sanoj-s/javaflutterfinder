@@ -3,9 +3,9 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>io.github.ashwithpoojary98</groupId>
+    <groupId>io.github.sanoj-s</groupId>
     <artifactId>appium_flutterfinder_java</artifactId>
-    <version>1.0.14</version>
+    <version>2.0.0</version>
     <build>
         <plugins>
             <plugin>
@@ -31,7 +31,7 @@
     <packaging>jar</packaging>
     <name>${project.groupId}:${project.artifactId}</name>
     <description>Flutter finder plugin for Appium in java</description>
-    <url>https://github.com/ashwithpoojary98/javaflutterfinder</url>
+    <url>https://github.com/sanoj-s/javaflutterfinder</url>
     <licenses>
         <license>
             <name>MIT License</name>
@@ -49,15 +49,15 @@
         </developer>
     </developers>
     <scm>
-        <connection>scm:git:git://github.com/ashwithpoojary98/javaflutterfinder.git</connection>
-        <developerConnection>scm:git:ssh://github.com:ashwithpoojary98/javaflutterfinder.git</developerConnection>
-        <url>https://github.com/ashwithpoojary98/javaflutterfinder</url>
+        <connection>scm:git:git://github.com/sanoj-s/javaflutterfinder.git</connection>
+        <developerConnection>scm:git:ssh://github.com:sanoj-s/javaflutterfinder.git</developerConnection>
+        <url>https://github.com/sanoj-s/javaflutterfinder</url>
     </scm>
 
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <appium.version>11.0.0</appium.version>
         <google.gson.version>2.13.1</google.gson.version>
         <testng.version>7.11.0</testng.version>
